@@ -17,8 +17,8 @@ IOS_BASE_CAPS = {
     'app': os.path.abspath('../apps/TestApp.app.zip'),
     'automationName': 'xcuitest',
     'platformName': 'iOS',
-    'platformVersion': os.getenv('IOS_PLATFORM_VERSION') or '12.4',
-    'deviceName': os.getenv('IOS_DEVICE_NAME') or 'iPhone Xs',
+    'platformVersion': os.getenv('IOS_PLATFORM_VERSION') or '13',
+    'deviceName': os.getenv('IOS_DEVICE_NAME') or 'iPhone 11 Pro Max',
     # 'showIOSLog': False,
 }
 
