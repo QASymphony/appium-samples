@@ -162,7 +162,7 @@ Screenshot below shows how the tests get execuuted: on the left is Appium runnin
 
 ## Reporting test result to qTets Manager ##
 
-Currently, we have configured the nodejs code in the Appium Universal Agent's Execute Command to kick off the *pytest* program and specify that the test should generate result under CSV format via the use of *pytest-csv* module, as shown  below (line 118 to 124 in the Execute Command)
+Up to this point, we have configured the nodejs code in the Appium Universal Agent's Execute Command to kick off the *pytest* program and specify that the test should generate result under CSV format via the use of *pytest-csv* module (via the notation of **--csv**, as shown below (line 118 to 124 in the Execute Command)
 
 ```
 ...
@@ -178,7 +178,7 @@ Currently, we have configured the nodejs code in the Appium Universal Agent's Ex
 
 In order to submit the test result to qTest Manager, we need to do 2 extra steps:
 
-- Implement a custom parser to parse the result under CSV format and upload it to qTest Launch
+- Implement a custom parser to parse the result under CSV format and upload it to qTest Launch. For the sake of this sample, we have already implemented the parser and include it in this repo at 
 - Update our Universal Agent to use the newly-created custom parser to parse the result and allow the Universal Agent to submit the result to qTest Manager
 
-To be continued...
+
