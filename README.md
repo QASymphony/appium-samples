@@ -220,7 +220,11 @@ Click **Save** to finish editing the Appium Universal Agent.
 
 Now, select **Run now** from the Appium Universal Agent, then click Execute button to execute the agent. You'll see the test is being kicked off with the Simulator running. 
 
-When the test finished exeution, you'll see the some logs in the Universal Agent's Console Log indicating the results are submitted to qTest Manager, as below.
+When the test finished execution, you'll see there are logs in the Universal Agent's Console Log indicating the results are submitted to qTest Manager, as below.
 
+![Execution Results Submitted](/docs/execution-results-sumitted.png)
 
+You will also see the submitted results in qTest Manager > Test Execution tab, as below.
+
+![Execution Results Submitted in Manager](/docs/execution-results-sumitted-in-manager.png)
 
