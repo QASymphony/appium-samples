@@ -17,15 +17,30 @@ Below components must be installed and configured in order for the sample to wor
 
 - [Activate Automation Integration](https://support.qasymphony.com/hc/en-us/articles/115002947946-Activate-Automation-Integration)
 - [Download and Install qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
-- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0)
-- [Python 3.7.4](https://www.python.org/downloads/release/python-374/)
-- [pytest](https://docs.pytest.org/en/latest/getting-started.html)
-- [pytest-csv](https://pypi.org/project/pytest-csv/). Note: this is required to generate test report under CSV format
-- You test machine should have [git](https://git-scm.com/downloads) install
+- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) needs to be installed in the same machine with Automation Host
+- [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host
+- [pytest](https://docs.pytest.org/en/latest/getting-started.html) needs to be installed in the same machine with Automation Host
+- [pytest-csv](https://pypi.org/project/pytest-csv/). needs to be installed in the same machine with Automation Host. Note: this module is required to generate test report under CSV format
+- You test machine should have [git](https://git-scm.com/downloads) installed
+
+# Clone Sample project and Setup environment #
+
+Clone sample project from this github repo to your loccal machine, e.g. /usr/local/var/appium-samples
+Open Terminal, navigate to your appium-samples directory using below command:
+
+```
+$ cd /usr/local/var/appium-samples/python
+```
+
+Still in the Terminal, execute below command to install requirements:
+
+```
+/usr/local/var/appium-samples/python $ pip install -r requirements.txt
+```
 
 # Create Appium Universal Agent #
 
-Access to Automation Host UI. Click on +Add button. From the New Agent dialog, enter the followings:
+Access to Automation Host UI. Click on **+Add** button. From the New Agent dialog, enter the followings:
 
 ## General Information ##
 
@@ -48,7 +63,6 @@ else
  git pull --all
 fi
 ```
-
 
 ## Execute Command ## 
 
@@ -114,4 +128,14 @@ try {
   return 0;
 }
 ```
-Click **Save** to finish creating Universal Agent
+
+Your Universal Agent will loook like below:
+
+
+Click **Save** to finish creating Universal Agent.
+
+
+
+## Execute Universal Agent to kick off your test ## 
+
+If Appium is not running, open Terminal and execute below command:
