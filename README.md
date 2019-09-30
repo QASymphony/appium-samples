@@ -17,7 +17,9 @@ Below components must be installed and configured in order for the sample to wor
 
 - [Activate Automation Integration](https://support.qasymphony.com/hc/en-us/articles/115002947946-Activate-Automation-Integration)
 - [Download and Install qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
-- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) needs to be installed in the same machine with Automation Host
+- Xcode 11.0 or later must be installed in the same machine with Automation Host
+- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
+- iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these information in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) to fit your environment
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host
 - [pytest](https://docs.pytest.org/en/latest/getting-started.html) needs to be installed in the same machine with Automation Host
 - [pytest-csv](https://pypi.org/project/pytest-csv/). needs to be installed in the same machine with Automation Host. Note: this module is required to generate test report under CSV format
