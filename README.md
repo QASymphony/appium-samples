@@ -130,12 +130,28 @@ try {
 ```
 
 Your Universal Agent will loook like below:
-
+![Create New Agent][new-agent]
+[new-agent]: /docs/new-agent.png "Create New Agent"
 
 Click **Save** to finish creating Universal Agent.
+Next step is to kick off our sample test project with Universal Agent.
 
-
-
-## Execute Universal Agent to kick off your test ## 
+## Kick off test project with Universal Agent ## 
 
 If Appium is not running, open Terminal and execute below command:
+
+```
+$ appium
+```
+The Terminal will now look like below
+![Run Appium][run-appium]
+[run-appium]: /docs/appium.png "Run Appium"
+
+Now, access to Automation Host UI. Locate the **Appium Universal Agent** in the Agent list. Click on action icon group and select **Run now**. As shown below.
+![Run Agent][run-agent]
+[run-agent]: /docs/run-now.png "Run Agent"
+
+From the opening Appium Universal Agent dialog, click on **Execute** button to execute the agent.
+![Execute Agent][execute-agent]
+[execute-agent]: /docs/execute-agent.png "Execute Agent"
+
