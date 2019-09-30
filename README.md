@@ -9,7 +9,7 @@ This sample project and instructions to integrate it with Universal Agent are pr
 - You are using Appium whose version is the same with the version we use in the sample: 1.15.0
 - The sample is developed and tested on MacOS. We will not provide support if your test framework run on a platform other than MacOS
 - The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide varieties of test frameworks which are built on top of different programming languages. We are open to learning new things but our knowledge of test frameworks are limited, so we reserve a right to NOT provide support to your test framework, even it is built using Python. You're supposed to be the expert on the test framework you use
-- You Mac machine must have Python 3.7.x installed
+- You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
 
 # Pre-requisites #
 
@@ -23,5 +23,95 @@ Below components must be installed and configured in order for the sample to wor
 - [pytest-csv](https://pypi.org/project/pytest-csv/). Note: this is required to generate test report under CSV format
 - You test machine should have [git](https://git-scm.com/downloads) install
 
-# Create Appium Universal Agent  #
+# Create Appium Universal Agent #
 
+Access to Automation Host UI. Click on +Add button. From the New Agent dialog, enter the followings:
+
+## General Information ##
+
+- Agent Name: **Appium Universal Agent**
+- qTest Manager Project: [select a qTest Manager project that you are a member of]
+- Agent Type: **Universal Agent**
+
+## Pre-Execute Script ## 
+
+Enter the script below to Pre-Execute Script field
+
+```bash
+#!/bin/bash
+if [ ! -d "/usr/local/var/appium-samples" ]
+then
+ cd "/usr/local/var"
+ git clone git@github.com:QASymphony/appium-samples.git
+else
+ cd /usr/local/var/appium-samples
+ git pull --all
+fi
+```
+
+
+## Execute Command ## 
+
+- Executor: **node**
+- Working Directory: **/usr/local/var/appium-samples/python**
+- Execute Command: enter the following to the Execute Command field
+
+```javascript
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+// path to pytest executable 
+// you must find the acctual path by execute this command in Terminal: which pytest 
+// then replace the value with the actual path in your machine
+const pytestExecutablePath = '<enter path to your pytest executable here>';
+
+let workingDir = process.env.WORKING_DIR || '';
+workingDir = workingDir.replace(/\\/g, "/");
+console.log('--- Working directory: ', workingDir);
+
+if (!fs.existsSync(workingDir)) {
+  console.log("No working directory found.");
+  return;
+}
+
+// results folder contains execution results to submit logs to qTest
+// NOTE: by default, the result fill be located at ${working directory}/test-results
+let resultsDir = path.resolve(`${workingDir}`, 'results');
+// create test results folder. If it already exists, deletes it and re-create it again.
+if (fs.existsSync(resultsDir)) {
+  execSync(`rm -rf "${resultsDir}"`);
+}
+fs.mkdirSync(resultsDir);
+
+let scheduledTestcases = '';
+// get automation content from magic variable TESTCASES_AC
+let testcases_AC = $TESTCASES_AC;
+// print automation content(s) to the execution log
+console.log('*** testcases_AC: ' + testcases_AC);
+
+testcases_AC = testcases_AC ? testcases_AC.split(',') : [];
+if (testcases_AC && testcases_AC.length > 0) {
+  let tcArray = [];
+  for (let tc of testcases_AC) {
+    tcArray.push(tc);
+  }
+  scheduledTestcases = tcArray.join(' ');
+}
+
+try {
+  var command = `${pytestExecutablePath} --csv ${resultsDir}/result.csv`;
+  if (scheduledTestcases != '') {
+    console.log(`scheduledTestcases: ${scheduledTestcases}`);
+    command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${resultsDir}/result.csv`;
+  }
+  console.log(`execcute command: ${command}`);
+  execSync(command, { stdio: 'inherit' });
+} catch (err) {
+  // pytest command exit code is 1 if some testcases failed
+  console.log(`Test execution error: ${err}`);
+  return 0;
+}
+```
+Click **Save** to finish creating Universal Agent
