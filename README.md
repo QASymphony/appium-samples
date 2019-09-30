@@ -1,6 +1,6 @@
 Please read the below statement carefully if you decided to integrate [Appium](http://appium.io/) test with [Universal Agent](https://support.qasymphony.com/hc/en-us/articles/360004704172-Universal-Agent-Overview).
 
-We, by any mean, are not Appium experts and our knowledge of it is very limited. Despite that fact, we still want to experiement the ability to integrate Appium with Universal Agent and share our yourney with ones who are considering integrating their Mobile test built on top of Appium framework with Universal Agent. 
+We, by any mean, are not Appium experts and our knowledge of it is very limited. Despite that fact, we still want to experiement the ability to integrate Appium with Universal Agent and share our journey with those who are considering integrating their Mobile test, which is built on top of Appium framework, with Universal Agent. 
 
 This sample project and instructions to integrate it with Universal Agent are provided "AS IS". We reserve the right to do NOT provide any support and/or bug fixes to the sample code unless you meet ALL of the below conditions:
 
