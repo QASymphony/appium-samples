@@ -148,8 +148,37 @@ The Terminal will now look like below
 Now, access to Automation Host UI. Locate the **Appium Universal Agent** in the Agent list. Click on action icon group and select **Run now**. As shown below.
 ![Run Agent](/docs/run-now.png "Run Agent")
 
-
 From the opening Appium Universal Agent dialog, click on **Execute** button to execute the agent.
 ![Execute Agent](/docs/execute-agent.png "Execute Agent")
 
+At this point, the Universal Agent does the followings to kick off our test:
 
+- Run Pre-Execute Script: this script checks for the existence of the /usr/local/var/appium-samples directory, which contains the sample code. If the directory does not exist, the script runs a git command to clone the sample code from this github repo into that diretory. Meanwhile, if the directory already exists, the script pulls the latest code from this repo to that directory
+- Run Execute Command: the execute command is the nodejs code that execute our appium sample tests
+
+Screenshot below shows how the tests get execuuted: on the left is Appium running in Terminal and printing its execution logs. On the right is the test application running on the Simulator naming **iPhone 11 Pro Max**
+
+![Test Running](/docs/test-running.png)
+
+## Reporting test result to qTets Manager ##
+
+Currently, we have configured the nodejs code in the Appium Universal Agent's Execute Command to kick off the *pytest* program and specify that the test should generate result under CSV format via the use of *pytest-csv* module, as shown  below (line 118 to 124 in the Execute Command)
+
+```
+...
+  var command = `${pytestExecutablePath} --csv ${resultsDir}/result.csv`;
+  if (scheduledTestcases != '') {
+    console.log(`scheduledTestcases: ${scheduledTestcases}`);
+    command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${resultsDir}/result.csv`;
+  }
+  console.log(`execcute command: ${command}`);
+  execSync(command, { stdio: 'inherit' });
+...
+```
+
+In order to submit the test result to qTest Manager, we need to do 2 extra steps:
+
+- Implement a custom parser to parse the result under CSV format and upload it to qTest Launch
+- Update our Universal Agent to use the newly-created custom parser to parse the result and allow the Universal Agent to submit the result to qTest Manager
+
+To be continued...
