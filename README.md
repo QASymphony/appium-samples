@@ -82,7 +82,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// absolute path to pytest executable 
+// absolute path to pytest executable
 // you can find the actual path by executing this command in Terminal: $ which pytest
 // then replacing the value with the actual path returned from that command
 const pytestExecutablePath = '<enter path to your pytest executable here>';
