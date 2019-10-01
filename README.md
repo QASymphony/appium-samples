@@ -9,7 +9,7 @@ This sample project and instructions to integrate it with Universal Agent are pr
 - You are using Appium whose version is the same with the version we use in the sample: 1.15.0, which is the latest version at the time of this writing
 - The sample is developed and tested on MacOS Mojave 10.14. We will not provide support if your test framework run on a platform other than MacOS or on different MacOS version
 - The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built using different programming languages. Again, our knowledge of test frameworks as well programming languages are limited, so we will NOT provide support if your issue is related to the framework that we do not have knowledge of and experience with. You're supposed to be the expert on the test framework you are using
-- You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine.
+- You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
 
 If you meet all of below conditions and have issues with your integration, feel free to submit an issue to THIS github repo.
 
@@ -23,7 +23,7 @@ Installed below components in order for the sample to work
 - Xcode 11.0 or later must be installed in the same machine with Automation Host
 - [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the IOS_BASE_CAPS) to fit your test environment
-- [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host
+- [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
 - [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
