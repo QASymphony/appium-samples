@@ -28,11 +28,11 @@ Installed below components in order for the sample to work
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
 
-# Clone Sample project and Setup environment #
+# Clone Sample project and Install dependencies #
 
 Clone sample project from this github repo to your loccal machine, e.g. at /usr/local/var/appium-samples
 
-Open Terminal, navigate to your appium-samples directory using below command:
+Open Terminal, navigate to your appium-samples directory with below command:
 
 ```
 $ cd /usr/local/var/appium-samples/python
@@ -51,7 +51,7 @@ Access to Automation Host UI. Click on **+Add** button. From the New Agent dialo
 ## General Information ##
 
 - Agent Name: **Appium Universal Agent**
-- qTest Manager Project: [select a qTest Manager project that you are a member of]
+- qTest Manager Project: \<select a qTest Manager project that you are a member of\>
 - Agent Type: **Universal Agent**
 
 ## Pre-Execute Script ## 
@@ -82,9 +82,9 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-// path to pytest executable 
-// you must find the acctual path by executing this command in Terminal: which pytest 
-// then replacing the value with the actual path in your machine
+// absolute path to pytest executable 
+// you can find the actual path by executing this command in Terminal: $ which pytest
+// then replacing the value with the actual path returned from that command
 const pytestExecutablePath = '<enter path to your pytest executable here>';
 
 let workingDir = process.env.WORKING_DIR || '';
