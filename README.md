@@ -161,7 +161,7 @@ At this point, the Universal Agent does the followings to kick off our test:
 
 Screenshot below shows how the tests get execuuted: on the left is Appium running in Terminal and printing its execution logs. On the right is the test application running on the Simulator naming *iPhone 11 Pro Max*. **Important note: at this point please do not switch back and force between applications on your Mac machine until the test completely finished its execution. From our experience, some tests will failed unexpectedly if the Simulator lost focus due to being deactivated, which is caused by switching to other applications on Mac machine**
 
-![Test Running](/docs/test-running.png)
+![Test Running](/docs/agent-running.png)
 
 ## Reporting test result to qTest Manager ##
 
