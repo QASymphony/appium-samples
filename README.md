@@ -195,7 +195,7 @@ For demonstration purpose, we implemented the custom parser and included it in t
 Next, enter the followings to upload the custom parsers:
 
 - Name: **Pytest CSV Parser**
-- Version: **1.0.0**
+- Version: **1.0**
 - Zip pakage: click Browse and select the customer parser that you just downloaded
 
 The Add Parser dialog will now look like below.
