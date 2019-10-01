@@ -105,9 +105,8 @@ if (fs.existsSync(resultsDir)) {
 }
 fs.mkdirSync(resultsDir);
 
-// $TESTCASES_AC is a 'magic' variable that holds automation content of scheduled test runs, if any, separated by a comma ','. The values of $TESTCASES_AC is fetched by Universal Agent everytime Universal Agent executes.
-
-// get automation content from magic variable $TESTCASES_AC and assign to testcases_AC
+// $TESTCASES_AC is a variable that holds automation content of scheduled test runs (if any) separated by a comma ','. 
+// The values of $TESTCASES_AC is fetched by Universal Agent everytime Universal Agent executes.
 let testcases_AC = $TESTCASES_AC;
 // print automation content(s) to the execution log
 console.log('*** testcases_AC: ' + testcases_AC);
