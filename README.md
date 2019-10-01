@@ -63,7 +63,7 @@ Enter the script below to Pre-Execute Script field
 if [ ! -d "/usr/local/var/appium-samples" ]
 then
  cd "/usr/local/var"
- git clone git@github.com:QASymphony/appium-samples.git
+ git clone https://github.com/QASymphony/appium-samples.git
 else
  cd /usr/local/var/appium-samples
  git pull --all
