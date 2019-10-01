@@ -36,7 +36,7 @@ Open Terminal, navigate to your appium-samples directory using below command:
 $ cd /usr/local/var/appium-samples/python
 ```
 
-Still in the Terminal, execute below command to install requirements:
+Still in the Terminal, execute below command to install dependencies:
 
 ```
 /usr/local/var/appium-samples/python $ pip install -r requirements.txt
