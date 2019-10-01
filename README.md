@@ -166,7 +166,7 @@ Screenshot below shows how the tests get execuuted: on the left is Appium runnin
 
 ## Reporting test result to qTets Manager ##
 
-Up to this point, we have configured the nodejs code in the Appium Universal Agent's Execute Command to kick off the *pytest* program and specify that the test should generate result under CSV format via the use of *pytest-csv* module (via the notation of **--csv**, as shown below (line 118 to 124 in the Execute Command)
+Up to this point, we have configured the nodejs code in the Appium Universal Agent's Execute Command to kick off the *pytest* program and specify that the test should generate result under CSV format via the use of **--csv** parameter, as shown below (line 118 to 124 in the Execute Command)
 
 ```
 ...
