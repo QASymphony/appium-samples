@@ -203,7 +203,7 @@ The Add Parser dialog will now look like below.
 
 Click **SAVE** to finish adding new parser
 
-Now, go back to Automation Host UI. Click **Poll Now** button. This will allow Automation Host to load latest updates from qTest Launch, inccluding the new parsers.
+Now, go back to Automation Host UI. Click **Poll Now** button. This will allow Automation Host to load latest updates from qTest Launch, including the new parsers.
 
 Next, we will edit Appium Universal Agent to use the custom parser. You'll do that by select **Edit** from Appium Universal Agent, as shown below.
 
@@ -232,7 +232,7 @@ You will also see the submitted results in qTest Manager > Test Execution tab, a
 
 ## Schedule Test Execution for Specific Tests ##
 
-Sometimes you do not need the whole tests get executed but some tests only. For instances, when there are failed tests due to bugs in your application, you go ahead fixing the bugs, build the app then run the tests that failed previously instead of all the tests.
+Sometimes you do not need the whole tests to be executed but some tests only. For instances, when there are failed tests due to bugs in your application, you go ahead fixing the bugs, build the app then run the tests that failed previously instead of all the tests.
 
 With qTest Launch, you can schedule test execution for specific tests only. You do that by selecting the test cases or test runs you want to be executed by Universal Agent.
 
