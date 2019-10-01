@@ -159,7 +159,7 @@ At this point, the Universal Agent does the followings to kick off our test:
 - Run Pre-Execute Script: this script checks for the existence of the /usr/local/var/appium-samples directory, which contains the sample code. If the directory does not exist, the script runs a git command to clone the sample code from this github repo into that diretory. Meanwhile, if the directory already exists, the script pulls the latest code from this repo to that directory
 - Run Execute Command: the execute command is the nodejs code that execute our appium sample tests
 
-Screenshot below shows how the tests get execuuted: on the left is Appium running in Terminal and printing its execution logs. On the right is the test application running on the Simulator naming *iPhone 11 Pro Max*. **Important note: at this point please do not switch back and force between applications on your Mac machine until the test completely finished its execution. From our experience, some tests will failed unexpectedly if the Simulator lost focus due to being deactivated, which is caused by switching to other applications on Mac machine**
+Screenshot below shows how the tests get executed: on the left is the Universal Agent printing its execution logs in its Console Log, on the right is the test application running on the Simulator naming *iPhone 11 Pro Max*. **Important note: at this point please do not switch back and forth between applications on your Mac machine until the test completely finished its execution. From our experience, some tests will failed unexpectedly if the Simulator lost focus due to being deactivated, which is caused by switching to other applications on Mac machine**
 
 ![Test Running](/docs/agent-running.png)
 
