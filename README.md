@@ -96,34 +96,31 @@ if (!fs.existsSync(workingDir)) {
   return;
 }
 
-// results folder contains execution results to submit logs to qTest
-// NOTE: by default, the result fill be located at ${working directory}/test-results
+// this variable holds the path to test result directory
 let resultsDir = path.resolve(`${workingDir}`, 'results');
-// create test results folder. If it already exists, deletes it and re-create it again.
+// remove the directory if it exists, and re-create it 
+// just to make sure we always have latest results from this execution
 if (fs.existsSync(resultsDir)) {
   execSync(`rm -rf "${resultsDir}"`);
 }
 fs.mkdirSync(resultsDir);
 
-let scheduledTestcases = '';
-// get automation content from magic variable TESTCASES_AC
+// $TESTCASES_AC is a 'magic' variable that holds automation content of scheduled test runs, if any, separated by a comma ','. The values of $TESTCASES_AC is fetched by Universal Agent everytime Universal Agent executes.
+
+// get automation content from magic variable $TESTCASES_AC and assign to testcases_AC
 let testcases_AC = $TESTCASES_AC;
 // print automation content(s) to the execution log
 console.log('*** testcases_AC: ' + testcases_AC);
 
-testcases_AC = testcases_AC ? testcases_AC.split(',') : [];
-if (testcases_AC && testcases_AC.length > 0) {
-  let tcArray = [];
-  for (let tc of testcases_AC) {
-    tcArray.push(tc);
-  }
-  scheduledTestcases = tcArray.join(' ');
-}
+// if testcases_AC has value, replace ',' with ' ' in its value then assign the result to scheduledTestcases var
+// otherwise, assign empty string to scheduledTestcases
+let scheduledTestcases = testcases_AC ? testcases_AC.replace(',', ' '): '';
 
 try {
   var command = `${pytestExecutablePath} --csv ${resultsDir}/result.csv`;
+  // if scheduledTestcases has value, the value will be used to specifiy which tests to be executed by pytest
   if (scheduledTestcases != '') {
-    console.log(`scheduledTestcases: ${scheduledTestcases}`);
+    console.log(`*** scheduledTestcases: ${scheduledTestcases}`);
     command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${resultsDir}/result.csv`;
   }
   console.log(`execcute command: ${command}`);
