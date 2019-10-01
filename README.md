@@ -72,7 +72,7 @@ fi
 
 - Executor: **node**
 - Working Directory: **/usr/local/var/appium-samples/python**
-- Execute Command: enter the following to the Execute Command field
+- Execute Command: enter the following to the Execute Command field. **Notes:** make sure you enter the actual value for the variable **pytestExecutablePath** following the comments in the scripts
 
 ```javascript
 
