@@ -228,3 +228,37 @@ You will also see the submitted results in qTest Manager > Test Execution tab, a
 
 ![Execution Results Submitted in Manager](/docs/execution-results-sumitted-in-manager.png)
 
+## Schedule Test Execution for Specific Tests ##
+
+Sometimes you do not need the whole tests get executed but some tests only. For instances, when there are failed tests due to bugs in your application, you go ahead fixing the bugs, build the app then run the tests that failed previously instead of all the tests.
+
+With qTest Launch, you can schedule test execution for specific tests only. You do that by selecting the test cases or test runs you want to be executed by Universal Agent.
+
+Follow steps below to schedule test execution for some selected tests in our sample project.
+
+1. Login to qTest Manager and navigate to Test Execution module then locate the Test Suite created from previous test execution
+2. On the right panel select test runs you want to execute
+3. Select MORE and then SCHEDULE. As below.
+
+![Scchedule Test 1](/docs/schedule-test-1.png)
+
+You will be naviated to qTest Launch where you'll schedule test execution for the selected test runs.
+On the **Schedule Test Run: Select Cases** screen, enter the name of the schedule, e.g. Re-run tests, then click NEXT.
+
+![Sehedule Test 2](/docs/schedule-test-2.png)
+
+On the **Select Hosts and Agents** screen, search for Appium Universal Agent, select it and click on **RUN NOW** button.
+
+![Schedule Test 3](/docs/schedule-test-3.png)
+
+On **Test Result Summary** screen, click **DONE** to finish your test scheduling.
+
+Now get back to the Automation Host UI. Click on **Poll Now** button to force the Automation Host to poll to qTest Launch to get updates. This time it will receive the job we just scheduled in qTest Launch and execute it. Wait for a while for the job execution to be finished then go to qTest Manager > Test Execution module to check for the result. This time you will see the 3 test runs has new test logs submitted to it (the LOGS column shows 2 as compared to 1 from other test runs, as show below. If you would like, you can click on the ID of the test run ro view its detail as well the Execution History 
+
+![Schedule Test 4](/docs/schedule-test-4.png)
+
+That's it. You have successfully integrate Appium tests with Universal Agent.
+
+
+
+
