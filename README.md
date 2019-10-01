@@ -6,24 +6,25 @@ This sample project and instructions to integrate it with Universal Agent are pr
 
 - You are a qTest Elite user
 - You must have some experience with mobile test development using Appium. We are not providing support to those who does not has knowledge of Appium, or to those who never develloped test automation with Appium
-- You are using Appium whose version is the same with the version we use in the sample: 1.15.0. This is the latest version at the time of this writing
+- You are using Appium whose version is the same with the version we use in the sample: 1.15.0, which is the latest version at the time of this writing
 - The sample is developed and tested on MacOS. We will not provide support if your test framework run on a platform other than MacOS
 - The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide varieties of test frameworks which are built on top of different programming languages. We are open to learning new things but our knowledge of the variaties of test frameworks are limited, so we reserve a right to NOT provide support to your test framework, even it is built using Python. You're supposed to be the expert on the test framework you are using
 - You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
 
 # Pre-requisites #
 
-Below components must be installed and configured in order for the sample to work
+[Activate Automation Integration in qTest Manager](https://support.qasymphony.com/hc/en-us/articles/115002947946-Activate-Automation-Integration)
 
-- [Activate Automation Integration](https://support.qasymphony.com/hc/en-us/articles/115002947946-Activate-Automation-Integration)
-- [Download and Install qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
+Installed below components in order for the sample to work
+
+- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - Xcode 11.0 or later must be installed in the same machine with Automation Host
 - [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
-- iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these information in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) to fit your environment
+- iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the IOS_BASE_CAPS) to fit your test environment
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host
-- [pytest](https://docs.pytest.org/en/latest/getting-started.html) needs to be installed in the same machine with Automation Host
-- [pytest-csv](https://pypi.org/project/pytest-csv/). needs to be installed in the same machine with Automation Host. Note: this module is required to generate test report under CSV format
-- You test machine should have [git](https://git-scm.com/downloads) installed
+- [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
+- [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
+- You test machine must have [git](https://git-scm.com/downloads) installed
 
 # Clone Sample project and Setup environment #
 
