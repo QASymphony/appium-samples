@@ -11,6 +11,8 @@ This sample project and instructions to integrate it with Universal Agent are pr
 - The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built using different programming languages. Again, our knowledge of test frameworks as well programming languages are limited, so we will NOT provide support if your issue is related to the framework that we do not have knowledge of and experience with. You're supposed to be the expert on the test framework you are using
 - You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
 
+If you meet all of below conditions and have issues with your integration, feel free to submit an issue to THIS github repo.
+
 # Pre-requisites #
 
 [Activate Automation Integration in qTest Manager](https://support.qasymphony.com/hc/en-us/articles/115002947946-Activate-Automation-Integration)
