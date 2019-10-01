@@ -28,7 +28,8 @@ Installed below components in order for the sample to work
 
 # Clone Sample project and Setup environment #
 
-Clone sample project from this github repo to your loccal machine, e.g. /usr/local/var/appium-samples
+Clone sample project from this github repo to your loccal machine, e.g. at /usr/local/var/appium-samples
+
 Open Terminal, navigate to your appium-samples directory using below command:
 
 ```
