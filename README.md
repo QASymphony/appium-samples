@@ -8,7 +8,7 @@ This sample project and instructions to integrate it with Universal Agent are pr
 - You must have some experience with mobile test development using Appium. We are not providing support to those who does not has knowledge of Appium, or to those who never develloped test automation with Appium
 - You are using Appium whose version is the same with the version we use in the sample: 1.15.0, which is the latest version at the time of this writing
 - The sample is developed and tested on MacOS. We will not provide support if your test framework run on a platform other than MacOS
-- The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide varieties of test frameworks which are built on top of different programming languages. We are open to learning new things but our knowledge of the variaties of test frameworks are limited, so we reserve a right to NOT provide support to your test framework, even it is built using Python. You're supposed to be the expert on the test framework you are using
+- The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built on top of different programming languages. Again, our knowledge of test frameworks as well programming languages are limited, so we will NOT provide support if your issue is related to the framework that we do not have knowledge of and experience with. You're supposed to be the expert on the test framework you are using
 - You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
 
 # Pre-requisites #
@@ -81,8 +81,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // path to pytest executable 
-// you must find the acctual path by execute this command in Terminal: which pytest 
-// then replace the value with the actual path in your machine
+// you must find the acctual path by executing this command in Terminal: which pytest 
+// then replacing the value with the actual path in your machine
 const pytestExecutablePath = '<enter path to your pytest executable here>';
 
 let workingDir = process.env.WORKING_DIR || '';
