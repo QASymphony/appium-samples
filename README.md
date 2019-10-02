@@ -15,7 +15,7 @@ If you meet all of above conditions and have issues with your integration, feel 
 
 [Activate Automation Integration in qTest Manager](https://support.qasymphony.com/hc/en-us/articles/115002947946-Activate-Automation-Integration)
 
-Installed below components in order for the sample to work
+Install below components in order for the sample to work
 
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - Xcode 11.0 or later must be installed in the same machine with Automation Host
