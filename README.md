@@ -253,7 +253,7 @@ On the **Select Hosts and Agents** screen, search for Appium Universal Agent, se
 
 On **Test Result Summary** screen, click **DONE** to finish your test scheduling.
 
-Now get back to the Automation Host UI. Click on **Poll Now** button to force the Automation Host to poll to qTest Launch to get updates. This time it will receive the job we just scheduled in qTest Launch and execute it. Wait for a while for the job execution to be finished then go to qTest Manager > Test Execution module to check for the result. This time you will see the 3 test runs having new test logs submitted to it (the LOGS column shows 2 as compared to 1 from other test runs, as shown below (if you would like, you can click on the ID of the test run ro view its details, including Execution History). 
+Now get back to the Automation Host UI. Click on **Poll Now** button to force the Automation Host to poll to qTest Launch to get updates. This time it will receive the job we just scheduled in qTest Launch and execute it. Wait for a while for the job execution to be finished then go to qTest Manager > Test Execution module to check for the result. This time you will see the 3 test runs having new test logs submitted to it (the LOGS column shows 2 as compared to 1 from other test runs, as shown below (if you would like, you can click on the ID of the test run to view its details, including Execution History). 
 
 ![Schedule Test 4](/docs/schedule-test-4.png)
 
