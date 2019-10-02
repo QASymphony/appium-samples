@@ -6,8 +6,8 @@ This sample project and instructions to integrate it with Universal Agent are pr
 - You must have some experience with mobile test development using Appium
 - You are using Appium whose version is the same with the version we use in the sample: 1.15.0, which is the latest version at the time of this writing
 - The sample is developed and tested on MacOS Mojave 10.14. We will not provide support if your test framework run on a platform other than MacOS or on different MacOS version
-- The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built using different programming languages. Our knowledge of Appium, the test frameworks and programming launguages being used to build those frameworks are limited, so we will not provide support if your issue is related to the framework that we do not have knowledge of, or experience with. You're supposed to be the expert on the test framework you are using
 - You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
+- The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built using different programming languages. Our knowledge of Appium, the test frameworks and programming launguages being used to build those frameworks are limited, so we will not provide support if your issue is related to the framework that we do not have knowledge of, or experience with. You're supposed to be the expert on the test framework you are using
 
 If you meet all of above conditions and have issues with your integration, feel free to submit an issue to THIS github repo.
 
