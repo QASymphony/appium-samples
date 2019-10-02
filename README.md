@@ -9,7 +9,7 @@ This sample project and instructions to integrate it with Universal Agent are pr
 - You Mac machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
 - The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built using different programming languages. Our knowledge of Appium, the test frameworks and programming launguages being used to build those frameworks are limited, so we will not provide support if your issue is related to the framework that we do not have knowledge of, or experience with. You're supposed to be the expert on the test framework you are using
 
-If you meet all of above conditions and have issues with your integration, feel free to submit an issue to THIS github repo.
+If you meet all of above conditions and have issues with your integration, feel free to submit your issue to THIS github repo.
 
 # Pre-requisites #
 
