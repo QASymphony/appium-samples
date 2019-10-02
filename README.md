@@ -1,4 +1,4 @@
-This repo is our experiement with [Appium](http://appium.io/) and the feasibility to integrate it with [Universal Agent](https://support.qasymphony.com/hc/en-us/articles/360004704172-Universal-Agent-Overview). Please read the below statement carefully if you decided to integrate your test frammework built on top of Appium with Universal Agent.
+This repo is our experiement with [Appium](http://appium.io/) for the feasibility to integrate it with [Universal Agent](https://support.qasymphony.com/hc/en-us/articles/360004704172-Universal-Agent-Overview). Please read the below statement carefully if you decided to integrate your test frammework built on top of Appium with Universal Agent.
 
 This sample project and instructions to integrate it with Universal Agent are provided "AS IS". We will NOT provide support and/or bug fixes to the sample code unless you meet ALL of the below conditions:
 
