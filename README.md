@@ -31,6 +31,8 @@ Common:
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
 
+*Note: You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables
+
 # Clone Sample project and Install dependencies #
 
 Clone sample project from this github repo to your loccal machine, e.g. at /usr/local/var/appium-samples
@@ -75,10 +77,10 @@ fi
 
 ## Execute Command ## 
 
-- Executor: **node**
-- Working Directory: **/usr/local/var/appium-samples/python**
+- Working Directory: **/usr/local/var/appium-samples/{platform}/python**
 - Execute Command: enter the following to the Execute Command field. **Notes:** make sure you enter the actual value for the variable **pytestExecutablePath** following the comments in the scripts
-
+- You can choose either **node** executor or **python3** executor as below:
+- Executor: **node**
 ```javascript
 
 const fs = require('fs');
@@ -133,6 +135,54 @@ try {
   return 0;
 }
 ```
+- Executor: **python3**
+```python
+
+import os
+import re
+import pytest
+
+# absolute path to pytest executable
+# you can find the actual path by executing this command in Terminal: $ which pytest
+# then replacing the value with the actual path returned from that command
+pytestExecutablePath = 'pytest';
+
+workingDir = os.environ['WORKING_DIR'] or '';
+workingDir = re.sub(r"\\", "/", workingDir);
+print ('--- Working directory: ', workingDir);
+
+if os.path.exists(workingDir) is False:
+  print ('No working directory found.');
+  exit();
+
+# this variable holds the path to test result directory
+resultsDir = os.path.join(workingDir, 'results');
+# remove the directory if it exists, and re-create it 
+# just to make sure we always have latest results from this execution
+if os.path.exists(resultsDir) is True:
+  os.system('rm -rf \"'+ resultsDir + '\"');
+
+os.system('mkdir ' + resultsDir);
+
+# $TESTCASES_AC is a variable that holds automation content of scheduled test runs (if any) separated by a comma ','. 
+# The values of $TESTCASES_AC is fetched by Universal Agent everytime Universal Agent executes.
+testcases_AC = $TESTCASES_AC;
+# print automation content(s) to the execution log
+print('*** testcases_AC: ' + $TESTCASES_AC);
+
+# if testcases_AC has value, replace ',' with ' ' in its value then assign the result to scheduledTestcases var
+# otherwise, assign empty string to scheduledTestcases
+scheduledTestcases = [] 
+if testcases_AC != '':
+  scheduledTestcases = testcases_AC.split(',');
+
+# if scheduledTestcases has value, the value will be used to specifiy which tests to be executed by pytest
+if (scheduledTestcases != []):
+  print('*** scheduledTestcases: ' + ', '.join(scheduledTestcases));
+
+pytestArgs = scheduledTestcases + ['--csv', resultsDir + '/result.csv'];
+pytest.main(pytestArgs);
+```
 
 Your Universal Agent will loook like below:
 ![Create New Agent](/docs/new-agent.png "Create New Agent")
@@ -150,6 +200,13 @@ $ appium
 The Terminal will now look like below
 ![Run Appium](/docs/appium.png "Run Appium")
 
+*Note*:
+For ***Windows***, you have to start Appium with from cmd with Administration privilege.
+For ***Android***, to kick-off the test, the only different compared to iOS is that you have to launch the emulator by yourself before running execute command by:
+- From the Android Studio welcome screen, select Configure -> AVD Manager
+![AVD Manager](/docs/avd-manager.png "AVD Manager")
+- Choose or create your Android emulator
+![Android Emulator](/docs/android-emulator.png "Android Emulator")
 Now, access to Automation Host UI. Locate the **Appium Universal Agent** in the Agent list. Click on action icon group and select **Run now**. As shown below.
 ![Run Agent](/docs/run-now.png "Run Agent")
 
