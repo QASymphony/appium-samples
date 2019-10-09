@@ -17,13 +17,13 @@ If you meet all of above conditions and have issues with your integration, feel 
 
 Install below components in order for the sample to work
 
-For iOS:
+For iOS (MacOS only)
 - Xcode 11.0 or later must be installed in the same machine with Automation Host
 - iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the IOS_BASE_CAPS) to fit your test environment
-For Android:
+For Android (MacOS or Windows)
 - Java 8 (or later) and Android Studio 3.5.0 or later must be installed in the same machine with Automation Host
-- Android Platform version: 10.0. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
-Common:
+- Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
+Other Pre-requisites Components:
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
@@ -77,7 +77,7 @@ fi
 
 ## Execute Command ## 
 
-- Working Directory: **/usr/local/var/appium-samples/{platform}/python**
+- Working Directory: **/usr/local/var/appium-samples/{platform}/python**. Make sure you change {platform} to either iOS or Android
 - Execute Command: enter the following to the Execute Command field. **Notes:** make sure you enter the actual value for the variable **pytestExecutablePath** following the comments in the scripts
 - You can choose either **node** executor or **python3** executor as below:
 - Executor: **node**
