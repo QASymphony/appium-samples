@@ -6,13 +6,11 @@ import sys
 from time import sleep
 
 from appium import webdriver
-from helpers import report_to_sauce, ANDROID_BASE_CAPS, EXECUTOR
+from helpers import ANDROID_BASE_CAPS, EXECUTOR
 from selenium.common.exceptions import WebDriverException
 
 
 class TestAndroidCreateWebSession(unittest.TestCase):
-    def tearDown(self):
-        report_to_sauce(self.driver.session_id)
 
     def test_should_create_and_destroy_android_web_session(self):
         caps = copy.copy(ANDROID_BASE_CAPS)

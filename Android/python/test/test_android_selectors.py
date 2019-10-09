@@ -3,7 +3,7 @@ import os
 import copy
 
 from appium import webdriver
-from helpers import report_to_sauce, take_screenshot_and_logcat, ANDROID_BASE_CAPS, EXECUTOR
+from helpers import take_screenshot_and_logcat, ANDROID_BASE_CAPS, EXECUTOR
 
 
 class TestAndroidSelectors():
@@ -20,7 +20,6 @@ class TestAndroidSelectors():
         )
 
         def fin():
-            report_to_sauce(driver.session_id)
             take_screenshot_and_logcat(driver, device_logger, calling_request)
             driver.quit()
 

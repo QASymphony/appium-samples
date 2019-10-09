@@ -15,13 +15,12 @@ py.test test
 ### Run an arbitrary file
 
 ```
-py.test test/test_ios_selectors.py
+py.test test/test_android_selectors.py
 ```
 
 ## TestCase
 ### unittest based
 - test/test_android_create_session.py
-- test/test_ios_create_session.py
 
 ### pytest based
 - Rest of the above

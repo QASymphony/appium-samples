@@ -17,10 +17,15 @@ If you meet all of above conditions and have issues with your integration, feel 
 
 Install below components in order for the sample to work
 
-- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
+For iOS:
 - Xcode 11.0 or later must be installed in the same machine with Automation Host
-- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the IOS_BASE_CAPS) to fit your test environment
+For Android:
+- Java 8 (or later) and Android Studio 3.5.0 or later must be installed in the same machine with Automation Host
+- Android Platform version: 10.0. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
+Common:
+- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
+- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
 - [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
@@ -33,13 +38,13 @@ Clone sample project from this github repo to your loccal machine, e.g. at /usr/
 Open Terminal, navigate to your appium-samples directory with below command:
 
 ```
-$ cd /usr/local/var/appium-samples/python
+$ cd /usr/local/var/appium-samples/{platform}/python
 ```
 
 Still in the Terminal, execute below command to install dependencies:
 
 ```
-/usr/local/var/appium-samples/python $ pip install -r requirements.txt
+/usr/local/var/appium-samples/{platform}/python $ pip install -r requirements.txt
 ```
 
 # Create Appium Universal Agent #
