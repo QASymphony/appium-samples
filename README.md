@@ -140,54 +140,6 @@ try {
   return 0;
 }
 ```
-- Executor: **python**
-```python
-
-import os
-import re
-import pytest
-
-# absolute path to pytest executable
-# you can find the actual path by executing this command in Terminal: $ which pytest
-# then replacing the value with the actual path returned from that command
-pytestExecutablePath = 'pytest';
-
-workingDir = os.environ['WORKING_DIR'] or '';
-workingDir = re.sub(r"\\", "/", workingDir);
-print ('--- Working directory: ', workingDir);
-
-if os.path.exists(workingDir) is False:
-  print ('No working directory found.');
-  exit();
-
-# this variable holds the path to test result directory
-resultsDir = os.path.join(workingDir, 'results');
-# remove the directory if it exists, and re-create it 
-# just to make sure we always have latest results from this execution
-if os.path.exists(resultsDir) is True:
-  os.system('rm -rf \"'+ resultsDir + '\"');
-
-os.system('mkdir ' + resultsDir);
-
-# $TESTCASES_AC is a variable that holds automation content of scheduled test runs (if any) separated by a comma ','. 
-# The values of $TESTCASES_AC is fetched by Universal Agent everytime Universal Agent executes.
-testcases_AC = $TESTCASES_AC;
-# print automation content(s) to the execution log
-print('*** testcases_AC: ' + $TESTCASES_AC);
-
-# if testcases_AC has value, replace ',' with ' ' in its value then assign the result to scheduledTestcases var
-# otherwise, assign empty string to scheduledTestcases
-scheduledTestcases = [] 
-if testcases_AC != '':
-  scheduledTestcases = testcases_AC.split(',');
-
-# if scheduledTestcases has value, the value will be used to specifiy which tests to be executed by pytest
-if (scheduledTestcases != []):
-  print('*** scheduledTestcases: ' + ', '.join(scheduledTestcases));
-
-pytestArgs = scheduledTestcases + ['--csv', resultsDir + '/result.csv'];
-pytest.main(pytestArgs);
-```
 
 Your Universal Agent will loook like below:
 ![Create New Agent](/docs/new-agent.png "Create New Agent")
