@@ -91,6 +91,7 @@ fi
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+let isWin = process.platform == "win32";
 
 // absolute path to pytest executable
 // you can find the actual path by executing this command in Terminal: $ which pytest
@@ -111,7 +112,11 @@ let resultsDir = path.resolve(`${workingDir}`, 'results');
 // remove the directory if it exists, and re-create it 
 // just to make sure we always have latest results from this execution
 if (fs.existsSync(resultsDir)) {
-  execSync(`rm -rf "${resultsDir}"`);
+  if (isWin) {
+    execSync(`rmdir /s /q "${resultsDir}"`);
+  } else {
+    execSync(`rm -rf "${resultsDir}"`);
+  }
 }
 fs.mkdirSync(resultsDir);
 
@@ -126,11 +131,12 @@ console.log('*** testcases_AC: ' + testcases_AC);
 let scheduledTestcases = testcases_AC ? testcases_AC.replace(',', ' '): '';
 
 try {
-  var command = `${pytestExecutablePath} --csv ${resultsDir}/result.csv`;
+  var pathToCSVResult = path.resolve(`${resultsDir}`, 'result.csv');
+  var command = `${pytestExecutablePath} --csv ${pathToCSVResult}`;
   // if scheduledTestcases has value, the value will be used to specifiy which tests to be executed by pytest
   if (scheduledTestcases != '') {
     console.log(`*** scheduledTestcases: ${scheduledTestcases}`);
-    command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${resultsDir}/result.csv`;
+    command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${pathToCSVResult}`;
   }
   console.log(`execcute command: ${command}`);
   execSync(command, { stdio: 'inherit' });
