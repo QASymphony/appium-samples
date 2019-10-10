@@ -197,7 +197,7 @@ Up to this point, we have configured the nodejs code in the Appium Universal Age
 
 In order to submit the test result to qTest Manager, we need to do 2 extra steps:
 
-- Implement a custom parser to parse the result under CSV format and upload it to qTest Launch
+- Implement a custom parser to parse the result under CSV format and upload the parser to qTest Launch for it to be available in Automation Host's Universal Agent
 - Update Appium Universal Agent to use the newly-created custom parser to parse the CSV result and so allow the Universal Agent to submit the result to qTest Manager
 
 For demonstration purpose, we implemented the custom parser and included it in this repo at [pytest-csv-parser.zip](https://github.com/QASymphony/appium-samples/blob/master/pytest-csv-parser.zip). If you want to learn more about how to implement a custom parser to parse your test results, follow this article: [Develop Custom Test Result Parser for Universal Agent](https://support.qasymphony.com/hc/en-us/articles/360004711012-Develop-Custom-Test-Result-Parser-for-Universal-Agent)
