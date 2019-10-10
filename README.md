@@ -36,7 +36,7 @@ Other Pre-requisites Components:
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
 
-*Note: You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables for the Android sample to woork
+*Note: You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables for the Android sample to work
 
 # Clone Sample project and Install dependencies #
 
