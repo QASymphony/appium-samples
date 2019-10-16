@@ -58,7 +58,7 @@ Clone sample project from this github repo to your local machine. In this exampl
 
 ## Mac ##
 
-Open Terminal. Execute below commands, one after another:
+Open Terminal. Execute below commands, one after another. **Note:** change {platform} to either iOS or Android
 ```
 $ cd /usr/local/var/appium-samples/{platform}/python
 $ pip install -r requirements.txt
@@ -66,9 +66,9 @@ $ pip install -r requirements.txt
 
 ## Windows ##
 
-Open Command Prompt. Execute below commands, one after another:
+Open Command Prompt. Execute below commands, one after another. **Note:** change {platform} to either iOS or Android
 ```
-> cd C:\appium-samples
+> cd C:\appium-samples\{platform}\python
 > pip install -r requirements.txt
 ```
 
