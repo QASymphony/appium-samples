@@ -56,7 +56,7 @@ Clone sample project from this github repo to your local machine. In this exampl
 - MacOS: /usr/local/var/appium-samples
 - Windows: C:\appium-samples
 
-## Mac ##
+## MacOS ##
 
 Open Terminal. Execute below commands, one after another. **Note:** change {platform} to either iOS or Android
 ```
