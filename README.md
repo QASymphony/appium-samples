@@ -23,6 +23,7 @@ If you meet all of above conditions and have issues with your integration, feel 
 Install below components in order for the sample to work
 
 For iOS (MacOS only)
+- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - Xcode 11.0 or later must be installed in the same Mac machine with Automation Host 
 - iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the IOS_BASE_CAPS) to fit your test environment
 For Android *
@@ -37,10 +38,10 @@ Other Pre-requisites Components:
 - You test machine must have [git](https://git-scm.com/downloads) installed
 
 For Android (MacOS and Windows)
+- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - Java 8 (or later) and [Android Studio](https://developer.android.com/studio) 3.5.0 or later must be installed in the same machine with Automation Host
 - Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the ANDROID_BASE_CAPS) to fit your test environment
 Other Pre-requisites Components:
-- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
 - [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
