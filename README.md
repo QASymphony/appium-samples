@@ -135,8 +135,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 let isWin = process.platform == "win32";
 
-// absolute path to pytest executable.
-// it is highly recommended to enter the full path to pytest executable. Otherwise, make sure pytest 
+// path to pytest executable.
+// it is highly recommended to enter the absolute path to pytest executable. Otherwise, make sure pytest 
 // was added to system' environment variable dependent on your Operating System
 const pytestExecutablePath = 'pytest';
 
