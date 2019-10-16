@@ -271,11 +271,10 @@ Next, we will edit Appium Universal Agent to use the custom parser. You'll do th
 ![Edit Agent](/docs/edit-agent.png "Edit Agent")
 
 In the edit Appium Universal Agent dialog, enter the followings:
-
-- Path to Results: select path to the .csv result file.
- - Mac: */usr/local/var/appium-samples/python/{platform}/results/result.csv*. **Notes:** make sure you change {platform} to either iOS or Android
- - Windows: *C:\appium-samples\python\Android\results\result.csv* 
-- Result Parser: select the custom parser we just uploaded to qTest Launch **Pytest CSV Parser**
+**Path to Results:** select path to the .csv result file depend on your OS.
+- Mac: */usr/local/var/appium-samples/python/{platform}/results/result.csv*. **Notes:** make sure you change {platform} to either iOS or Android
+- Windows: *C:\appium-samples\python\Android\results\result.csv* 
+**Result Parser:** select the custom parser we just uploaded to qTest Launch: **Pytest CSV Parser**
 
 Your agent will now look like below.
 
