@@ -135,10 +135,10 @@ const path = require('path');
 const { execSync } = require('child_process');
 let isWin = process.platform == "win32";
 
-// absolute path to pytest executable
-// you can find the actual path by executing this command in Terminal: $ which pytest
-// then replacing the value with the actual path returned from that command
-const pytestExecutablePath = '<enter path to your pytest executable here>';
+// absolute path to pytest executable.
+// it is highly recommended to enter the full path to pytest executable. Otherwise, make sure pytest 
+// was added to system' environment variable dependent on your Operating System
+const pytestExecutablePath = 'pytest';
 
 let workingDir = process.env.WORKING_DIR || '';
 workingDir = workingDir.replace(/\\/g, "/");
