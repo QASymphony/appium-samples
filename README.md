@@ -49,7 +49,11 @@ Other Pre-requisites Components:
 - [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
-*Note: You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables for the Android sample to work
+
+*Note:* You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables for the Android sample to work. Instructions:
+- Set JAVA environment variable (Windows, Mac): https://www.java.com/en/download/help/path.xml
+- Set ANDROID_HOME envirronment variable (Windows, Mac): [https://www.dev2qa.com/how-to-set-android-sdk-path-in-windows-and-mac/](https://www.dev2qa.com/how-to-set-android-sdk-path-in-windows-and-mac/)
+
 
 # Clone Sample project and Install dependencies #
 Clone sample project from this github repo to your local machine. In this example, the sample will be located at:
