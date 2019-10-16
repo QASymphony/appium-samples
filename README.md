@@ -37,6 +37,7 @@ Other Pre-requisites Components:
 - You test machine must have [git](https://git-scm.com/downloads) installed
 
 For Android (MacOS and Windows)
+- Java 8 (or later) and Android Studio 3.5.0 or later must be installed in the same machine with Automation Host
 - Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
 Other Pre-requisites Components:
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
