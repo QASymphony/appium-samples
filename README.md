@@ -228,14 +228,15 @@ Screenshot below shows how the tests get executed: on the left is the Universal 
 Up to this point, we have configured the nodejs code in the Appium Universal Agent's Execute Command to kick off the *pytest* program and specify that the test should generate result under CSV format via the use of **--csv** parameter, as shown below.
 
 ```
-...
+...  
   var command = `${pytestExecutablePath} --csv ${pathToCSVResult}`;
+  // if scheduledTestcases has value, the value will be used to specifiy which tests to be executed by pytest
   if (scheduledTestcases != '') {
-    console.log(`scheduledTestcases: ${scheduledTestcases}`);
-    command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${resultsDir}/result.csv`;
+    console.log(`*** scheduledTestcases: ${scheduledTestcases}`);
+    command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${pathToCSVResult}`;
   }
   console.log(`execcute command: ${command}`);
-  execSync(command, { stdio: 'inherit' });
+  execSync(command, { stdio: 'inherit' });  
 ...
 ```
 
