@@ -197,7 +197,10 @@ Next step is to kick off our sample test project with Universal Agent.
 
 ## Kick off test project with Universal Agent ## 
 
-If Appium is not running, open Terminal and execute below command:
+Start Appium if it is not running
+
+### MacOS ###
+Open Terminal and execute below command:
 
 ```
 $ appium
@@ -205,13 +208,14 @@ $ appium
 The Terminal will now look like below
 ![Run Appium](/docs/appium.png "Run Appium")
 
-*Note*:
-For ***Windows***, you have to start Appium with from Command Prompt with Administration privilege.
-For ***Android***, to kick-off the test, the only different compared to iOS is that you have to launch the emulator by yourself before running execute command by:
+### Windows ###
+
+For ***Windows***, you have to start Appium from Command Prompt with Administration privilege. Also, you have to launch the emulator by yourself following below steps:
 - From the Android Studio welcome screen, select Configure -> AVD Manager
 ![AVD Manager](/docs/avd-manager.png "AVD Manager")
-- Choose or create your Android emulator
+- Select or create your Android emulator if it does not exist
 ![Android Emulator](/docs/android-emulator.png "Android Emulator")
+
 Now, access to Automation Host UI. Locate the **Appium Universal Agent** in the Agent list. Click on action icon group and select **Run now**. As shown below.
 ![Run Agent](/docs/run-now.png "Run Agent")
 
