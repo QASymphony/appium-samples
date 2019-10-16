@@ -33,6 +33,7 @@ Other Pre-requisites Components:
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
+- This sample also uses [pip](https://pip.pypa.io/en/stable/) to install some python dependencies. So make sure you have pip installed in your machine. You can find the instructions to install pip at: [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/)
 - [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
@@ -44,27 +45,31 @@ For Android (MacOS and Windows)
 Other Pre-requisites Components:
 - [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
+- This sample also uses [pip](https://pip.pypa.io/en/stable/) to install some python dependencies. So make sure you have pip installed in your machine. You can find the instructions to install pip at: [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/)
 - [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
-
-
 *Note: You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables for the Android sample to work
 
 # Clone Sample project and Install dependencies #
+Clone sample project from this github repo to your local machine. In this example, the sample will be located at:
+- MacOS: /usr/local/var/appium-samples
+- Windows: C:\appium-samples
 
-Clone sample project from this github repo to your loccal machine, e.g. at /usr/local/var/appium-samples
+## Mac ##
 
-Open Terminal, navigate to your appium-samples directory with below command:
-
+Open Terminal. Execute below commands, one after another:
 ```
 $ cd /usr/local/var/appium-samples/{platform}/python
+$ pip install -r requirements.txt
 ```
 
-Still in the Terminal, execute below command to install dependencies:
+## Windows ##
 
+Open Command Prompt. Execute below commands, one after another:
 ```
-/usr/local/var/appium-samples/{platform}/python $ pip install -r requirements.txt
+> cd C:\appium-samples
+> pip install -r requirements.txt
 ```
 
 # Create Appium Universal Agent #
@@ -79,7 +84,9 @@ Access to Automation Host UI. Click on **+Add** button. From the New Agent dialo
 
 ## Pre-Execute Script ## 
 
-Enter the script below to Pre-Execute Script field
+Enter the script below to Pre-Execute Script field which is specific to the OS you're using.
+
+### MacOS ###
 
 ```bash
 #!/bin/bash
@@ -93,12 +100,30 @@ else
 fi
 ```
 
+### Windows ###
+```
+if not exist "C:\appium-samples" (
+ cd /d C:\
+ git clone https://github.com/QASymphony/appium-samples.git
+) else (
+ cd /d "C:\appium-samples"
+ git pull --all
+)
+```
+
 ## Execute Command ## 
 
-- Working Directory: **/usr/local/var/appium-samples/{platform}/python**. Make sure you change {platform} to either iOS or Android
-- Execute Command: enter the following to the Execute Command field. **Notes:** make sure you enter the actual value for the variable **pytestExecutablePath** following the comments in the scripts
-- You can choose either **node** executor or **python3** executor as below:
-- Executor: **node**
+### Working Directory ###
+**Notes:** change {platform} in below command to either iOS or Android
+- Mac: **/usr/local/var/appium-samples/{platform}/python** 
+- Windows: **C:\appium-samples\{platform}\python**.
+
+### Executor: ###
+Select **node**
+
+### Execute Command ###
+Enter the following to the Execute Command field (either Windows or Mac). **Notes:** make sure you enter the actual value for the variable **pytestExecutablePath** following the comments in the scripts
+
 ```javascript
 
 const fs = require('fs');
@@ -177,7 +202,7 @@ The Terminal will now look like below
 ![Run Appium](/docs/appium.png "Run Appium")
 
 *Note*:
-For ***Windows***, you have to start Appium with from cmd with Administration privilege.
+For ***Windows***, you have to start Appium with from Command Prompt with Administration privilege.
 For ***Android***, to kick-off the test, the only different compared to iOS is that you have to launch the emulator by yourself before running execute command by:
 - From the Android Studio welcome screen, select Configure -> AVD Manager
 ![AVD Manager](/docs/avd-manager.png "AVD Manager")
@@ -204,7 +229,7 @@ Up to this point, we have configured the nodejs code in the Appium Universal Age
 
 ```
 ...
-  var command = `${pytestExecutablePath} --csv ${resultsDir}/result.csv`;
+  var command = `${pytestExecutablePath} --csv ${pathToCSVResult}`;
   if (scheduledTestcases != '') {
     console.log(`scheduledTestcases: ${scheduledTestcases}`);
     command = `${pytestExecutablePath} ${scheduledTestcases} --csv ${resultsDir}/result.csv`;
@@ -247,7 +272,9 @@ Next, we will edit Appium Universal Agent to use the custom parser. You'll do th
 
 In the edit Appium Universal Agent dialog, enter the followings:
 
-- Path to Results: select path to the .csv result file, in our example it is **/usr/local/var/appium-samples/python/{platform}/results/result.csv**. Make sure you change {platform} to either iOS or Android
+Path to Results: select path to the .csv result file. **Notes:** make sure you change {platform} to either iOS or Android
+ - Mac: **/usr/local/var/appium-samples/python/{platform}/results/result.csv**
+ - Windows: **C:\appium-samples\python\{platform}\results/result.csv**. 
 - Result Parser: select the custom parser we just uploaded to qTest Launch **Pytest CSV Parser**
 
 Your agent will now look like below.
