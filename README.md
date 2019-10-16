@@ -36,6 +36,17 @@ Other Pre-requisites Components:
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
 
+For Android (MacOS and Windows)
+- Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
+Other Pre-requisites Components:
+- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
+- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
+- [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
+- [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
+- [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
+- You test machine must have [git](https://git-scm.com/downloads) installed
+
+
 *Note: You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables for the Android sample to work
 
 # Clone Sample project and Install dependencies #
