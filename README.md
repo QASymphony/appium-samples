@@ -53,8 +53,8 @@ Other Pre-requisites Components:
 
 # Clone Sample project and Install dependencies #
 Clone sample project from this github repo to your local machine. In this example, the sample will be located at:
-- MacOS: /usr/local/var/appium-samples
-- Windows: C:\appium-samples
+- MacOS: */usr/local/var/appium-samples*
+- Windows: *C:\appium-samples*
 
 ## MacOS ##
 
@@ -66,9 +66,9 @@ $ pip install -r requirements.txt
 
 ## Windows ##
 
-Open Command Prompt. Execute below commands, one after another. **Note:** change {platform} to either iOS or Android
+Open Command Prompt. Execute below commands, one after another.
 ```
-> cd C:\appium-samples\{platform}\python
+> cd C:\appium-samples\Android\python
 > pip install -r requirements.txt
 ```
 
@@ -114,9 +114,9 @@ if not exist "C:\appium-samples" (
 ## Execute Command ## 
 
 ### Working Directory ###
-**Notes:** change {platform} in below command to either iOS or Android
-- Mac: **/usr/local/var/appium-samples/{platform}/python** 
-- Windows: **C:\appium-samples\{platform}\python**.
+
+- Mac: */usr/local/var/appium-samples/{platform}/python*. **Notes:** change {platform} to either iOS or Android
+- Windows: *C:\appium-samples\Android\python*.
 
 ### Executor: ###
 Select **node**
@@ -214,8 +214,7 @@ Now, access to Automation Host UI. Locate the **Appium Universal Agent** in the 
 From the opening Appium Universal Agent dialog, click on **Execute** button to execute the agent.
 ![Execute Agent](/docs/execute-agent.png "Execute Agent")
 
-At this point, the Universal Agent does the followings to kick off our test:
-
+At this point, the Universal Agent does the followings to kick off the test:
 - Run Pre-Execute Script: this script checks for the existence of the /usr/local/var/appium-samples directory, which contains the sample code. If the directory does not exist, the script runs a git command to clone the sample code from this github repo into that diretory. Meanwhile, if the directory already exists, the script pulls the latest code from this repo to that directory
 - Run Execute Command: the execute command is the nodejs code that execute our appium sample tests
 
@@ -273,9 +272,9 @@ Next, we will edit Appium Universal Agent to use the custom parser. You'll do th
 
 In the edit Appium Universal Agent dialog, enter the followings:
 
-Path to Results: select path to the .csv result file. **Notes:** make sure you change {platform} to either iOS or Android
- - Mac: **/usr/local/var/appium-samples/python/{platform}/results/result.csv**
- - Windows: **C:\appium-samples\python\{platform}\results/result.csv**. 
+- Path to Results: select path to the .csv result file.
+ - Mac: */usr/local/var/appium-samples/python/{platform}/results/result.csv*. **Notes:** make sure you change {platform} to either iOS or Android
+ - Windows: *C:\appium-samples\python\Android\results\result.csv* 
 - Result Parser: select the custom parser we just uploaded to qTest Launch **Pytest CSV Parser**
 
 Your agent will now look like below.
