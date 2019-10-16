@@ -119,7 +119,7 @@ if not exist "C:\appium-samples" (
 - Windows: *C:\appium-samples\Android\python*.
 
 ### Executor: ###
-Select **node**
+Select **node** as the Execute Command's executor.
 
 ### Execute Command ###
 Enter the following to the Execute Command field (either Windows or Mac). **Notes:** make sure you enter the actual value for the variable **pytestExecutablePath** following the comments in the scripts
