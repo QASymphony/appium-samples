@@ -122,7 +122,7 @@ if not exist "C:\appium-samples" (
 - Mac: */usr/local/var/appium-samples/{platform}/python*. **Notes:** change {platform} to either iOS or Android
 - Windows: *C:\appium-samples\Android\python*.
 
-### Executor: ###
+### Executor ###
 Select **node** as the Execute Command's executor.
 
 ### Execute Command ###
