@@ -31,6 +31,7 @@ For Android *
 - Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
 Other Pre-requisites Components:
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
+- Node.js 10.16.3 must be installed in the same machine with Automation Host
 - [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
 - [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
 - This sample also uses [pip](https://pip.pypa.io/en/stable/) to install some python dependencies. So make sure you have pip installed in your machine. You can find the instructions to install pip at: [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/)
@@ -40,6 +41,7 @@ Other Pre-requisites Components:
 
 For Android (MacOS and Windows)
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
+- Node.js 10.16.3 must be installed in the same machine with Automation Host
 - Java 8 (or later) and [Android Studio](https://developer.android.com/studio) 3.5.0 or later must be installed in the same machine with Automation Host
 - Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the ANDROID_BASE_CAPS) to fit your test environment
 Other Pre-requisites Components:
