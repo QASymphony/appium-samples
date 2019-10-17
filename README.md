@@ -9,7 +9,7 @@ This sample project and instructions to integrate it with Universal Agent are pr
  * For iOS sample (MacOS only)
    * The [iOS sample](https://github.com/QASymphony/appium-samples/tree/master/iOS) is tested against iOS 11 on MacOS Mojave 10.14
  * For Android sample (Windows and MacOS)
-   * The [Android sample](https://github.com/QASymphony/appium-samples/tree/master/Android) is tested on MacOS Mojave 10.14 and Windows 8 with Android Studio 3.5.0 and Android Platform version 10.0 installed
+   * The [Android sample](https://github.com/QASymphony/appium-samples/tree/master/Android) is tested on MacOS Mojave 10.14 and Windows 10 with Android Studio 3.5.0 and Android Platform version 10.0 installed
  * Python
    * You machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
    * The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built using different programming languages. Our knowledge of Appium, the test frameworks and programming launguages being used to build those frameworks are limited, so we will not provide support if your issue is related to the framework that we do not have knowledge of, or experience with. You're supposed to be the expert on the test framework you are using
