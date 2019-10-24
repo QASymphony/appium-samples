@@ -8,7 +8,7 @@ ANDROID_BASE_CAPS = {
     'automationName': 'UIAutomator2',
     'platformName': 'Android',
     'platformVersion': os.getenv('ANDROID_PLATFORM_VERSION') or '10.0',
-    'deviceName': os.getenv('ANDROID_DEVICE_VERSION') or 'Pixel 3 API 28',
+    'deviceName': os.getenv('ANDROID_DEVICE_VERSION') or 'Pixel 3 API 29',
 }
 
 EXECUTOR = 'http://127.0.0.1:4723/wd/hub'
