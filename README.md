@@ -26,9 +26,11 @@ For iOS (MacOS only)
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - Xcode 11.0 or later must be installed in the same Mac machine with Automation Host 
 - iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the IOS_BASE_CAPS) to fit your test environment
+
 For Android (Windows only)
 - Java 8 (or later) and Android Studio 3.5.0 or later must be installed in the same machine with Automation Host
 - Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
+
 Other Pre-requisites Components:
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - Node.js 10.16.3 must be installed in the same machine with Automation Host
