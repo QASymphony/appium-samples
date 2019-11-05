@@ -8,8 +8,8 @@ This sample project and instructions to integrate it with Universal Agent are pr
 4. Tested envionment
  * For iOS sample (MacOS only)
    * The [iOS sample](https://github.com/QASymphony/appium-samples/tree/master/iOS) is tested against iOS 11 on MacOS Mojave 10.14
- * For Android sample (Windows and MacOS)
-   * The [Android sample](https://github.com/QASymphony/appium-samples/tree/master/Android) is tested on MacOS Mojave 10.14 and Windows 10 with Android Studio 3.5.0 and Android Platform version 10.0 installed
+ * For Android sample (Windows only)
+   * The [Android sample](https://github.com/QASymphony/appium-samples/tree/master/Android) is tested on Windows 10 with Android Studio 3.5.0 and Android Platform version 10.0 installed
  * Python
    * You machine must have [Python 3.7.4+](https://www.python.org/downloads/release/python-374/) installed
    * The sample test project uses python, which is originally cloned from [here](https://github.com/appium/appium). You should know Appium can be integrated with a wide range of test frameworks which are built using different programming languages. Our knowledge of Appium, the test frameworks and programming launguages being used to build those frameworks are limited, so we will not provide support if your issue is related to the framework that we do not have knowledge of, or experience with. You're supposed to be the expert on the test framework you are using
@@ -26,7 +26,7 @@ For iOS (MacOS only)
 - [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
 - Xcode 11.0 or later must be installed in the same Mac machine with Automation Host 
 - iOS Platform version: 13.0. Device name: iPhone 11 Pro Max. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the IOS_BASE_CAPS) to fit your test environment
-For Android *
+For Android (Windows only)
 - Java 8 (or later) and Android Studio 3.5.0 or later must be installed in the same machine with Automation Host
 - Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the helpers.py (look for the ANDROID_BASE_CAPS) to fit your test environment
 Other Pre-requisites Components:
@@ -39,18 +39,6 @@ Other Pre-requisites Components:
 - [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
 - You test machine must have [git](https://git-scm.com/downloads) installed
 
-For Android (MacOS and Windows)
-- [qTest Automation Host 2.3.2 or later](https://support.qasymphony.com/hc/en-us/articles/115005243923-Download-qTest-Automation-Host)
-- Node.js 10.16.3 must be installed in the same machine with Automation Host
-- Java 8 (or later) and [Android Studio](https://developer.android.com/studio) 3.5.0 or later must be installed in the same machine with Automation Host
-- Android platform version: 10.0+. Device name: Pixel 3 API 29. You can view and change these capabilties in the [helpers.py](https://github.com/QASymphony/appium-samples/blob/master/python/test/helpers.py) (look for the ANDROID_BASE_CAPS) to fit your test environment
-Other Pre-requisites Components:
-- [Appium 1.15.0](https://github.com/appium/appium/releases/tag/v1.15.0) must be installed in the same machine with Automation Host
-- [Python 3.7.4](https://www.python.org/downloads/release/python-374/) needs to be installed in the same machine with Automation Host. It is highly recommended to install [pyenv](https://github.com/pyenv/pyenv) and use it to configure Python 3.7 to be the default Python program in your Mac machine
-- This sample also uses [pip](https://pip.pypa.io/en/stable/) to install some python dependencies. So make sure you have pip installed in your machine. You can find the instructions to install pip at: [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/)
-- [pytest](https://docs.pytest.org/en/latest/getting-started.html) framework is used to run our sample test and needs to be installed on the same machine with Automation Host
-- [pytest-csv](https://pypi.org/project/pytest-csv/) needs to be installed on the same machine with Automation Host. Note: this module is required to generate test report under CSV format
-- You test machine must have [git](https://git-scm.com/downloads) installed
 
 *Note:* You need to set JAVA_HOME, JAVA_HOME/bin and ANDROID_HOME paths to system variables for the Android sample to work. Instructions:
 - Set JAVA environment variable (Windows, Mac): https://www.java.com/en/download/help/path.xml
