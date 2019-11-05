@@ -64,9 +64,9 @@ Clone sample project from this github repo to your local machine. In this exampl
 
 ## MacOS ##
 
-Open Terminal. Execute below commands, one after another. **Note:** change {platform} to either iOS or Android
+Open Terminal. Execute below commands, one after another.
 ```
-$ cd /usr/local/var/appium-samples/{platform}/python
+$ cd /usr/local/var/appium-samples/iOS/python
 $ pip install -r requirements.txt
 ```
 
@@ -121,7 +121,7 @@ if not exist "C:\appium-samples" (
 
 ### Working Directory ###
 
-- Mac: */usr/local/var/appium-samples/{platform}/python*. **Notes:** change {platform} to either iOS or Android
+- Mac: */usr/local/var/appium-samples/iOS/python*
 - Windows: *C:\appium-samples\Android\python*.
 
 ### Executor ###
@@ -282,8 +282,8 @@ Next, we will edit Appium Universal Agent to use the custom parser. You'll do th
 
 In the edit Appium Universal Agent dialog, enter the followings:
 **Path to Results:** select path to the .csv result file depend on your OS.
-- Mac: */usr/local/var/appium-samples/python/{platform}/results/result.csv*. **Notes:** make sure you change {platform} to either iOS or Android
-- Windows: *C:\appium-samples\python\Android\results\result.csv* 
+- Mac: */usr/local/var/appium-samples/iOS/python/results/result.csv*
+- Windows: *C:\appium-samples\Android\python\results\result.csv* 
 **Result Parser:** select the custom parser we just uploaded to qTest Launch: **Pytest CSV Parser**
 
 Your agent will now look like below.
