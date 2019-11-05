@@ -58,7 +58,7 @@ Clone sample project from this github repo to your local machine. In this exampl
 Open Terminal. Execute below commands, one after another.
 ```
 $ cd /usr/local/var/appium-samples/iOS/python
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 ## Windows ##
